@@ -3,8 +3,8 @@
     "type": "phpbb-extension",
     "description": "Welcome PM for registration and activation",
     "homepage": "http://phpbbguru.net",
-    "version": "1.0.1",
-    "time": "2015-06-09",
+    "version": "1.0.2",
+    "time": "2020-04-22",
     "license": "GPL-2.0",
     "authors": [
         {
@@ -15,12 +15,18 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "phpbb/phpbb": ">=3.1.6-RC1,<3.2@dev"
     },
     "extra": {
         "display-name": "PM Welcome",
         "soft-require": {
-        "phpbb/phpbb": ">=3.1.6-RC1,<3.2.*@dev"
+            "phpbb/phpbb": ">=3.1.6-RC1,<3.2.*@dev"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/private_message_welcome",
+            "filename": "version_check"
         }
     }
 }
